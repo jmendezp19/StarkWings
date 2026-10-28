@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stork Wings &mdash; Business Model</title>
+<meta name="description" content="A business model proposal for Stork Wings: a marketplace for children's clothing. Prepared by the Stork Wings group, MA50200 Business Operation Management, San Ignacio University.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap">
+<style>
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;background:#141d16;font-family:Karla,Verdana,sans-serif;overflow:hidden}
+  #stage{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+  #canvas{width:1920px;height:1080px;transform-origin:center center;position:relative;
+          box-shadow:0 24px 80px rgba(0,0,0,.55);border-radius:4px;overflow:hidden}
+  #canvas > section{position:absolute;inset:0;width:1920px;height:1080px;display:none}
+  #canvas > section.on{display:flex}
+  #bar{position:fixed;left:0;right:0;bottom:0;height:56px;display:flex;align-items:center;
+       justify-content:space-between;padding:0 20px;color:#9FAE9B;font-size:14px;
+       background:linear-gradient(to top,rgba(20,29,22,.96),rgba(20,29,22,0))}
+  #bar button{background:#263528;color:#FBF7EF;border:1px solid #3A5940;border-radius:8px;
+              padding:7px 14px;font:inherit;font-size:14px;cursor:pointer}
+  #bar button:hover{background:#3A5940}
+  #bar .mid{display:flex;align-items:center;gap:12px}
+  #count{font-variant-numeric:tabular-nums;min-width:62px;text-align:center}
+  #notes{position:fixed;left:0;right:0;bottom:56px;max-height:34vh;overflow:auto;
+         padding:16px 22px;background:rgba(20,29,22,.97);color:#C3CFBF;font-size:15px;
+         line-height:1.55;border-top:1px solid #3A5940;display:none}
+  #notes.on{display:block}
+  @media print{#bar,#notes{display:none}}
+</style>
+</head>
+<body>
+<div id="stage"><div id="canvas">
+<section id="cover"  style="background:#1E2A20;color:#FBF7EF;font-family:Karla, Verdana, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:space-between">
+<div style="display:flex;flex-direction:column;gap:30px">
+<p style="font-size:28px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#D96BA0">A business model proposal</p>
+<h1 style="font-family:Fraunces, Georgia, serif;font-size:136px;font-weight:600;line-height:1.02;color:#FBF7EF;width:1520px">Stork Wings</h1>
+<h2 style="font-family:Fraunces, Georgia, serif;font-size:54px;font-weight:400;line-height:1.18;color:#C3CFBF;width:1400px">From a shop that owns its stock to a marketplace that never does</h2>
+</div>
+<div style="display:flex;align-items:end;justify-content:space-between">
+<div style="display:flex;flex-direction:column;gap:10px">
+<p style="font-size:30px;font-weight:600;color:#FBF7EF">Prepared by the Stork Wings group</p>
+<p style="font-size:26px;color:#9FAE9B">MA50200 Business Operation Management &middot; San Ignacio University</p>
+</div>
+<p style="font-size:26px;color:#9FAE9B">October 2026</p>
+</div>
+
+</section>
+<section id="today"  style="background:#F3EEE3;color:#1E2A20;font-family:Karla, Verdana, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:14px">
+<p style="font-size:28px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#D96BA0">storkwings.com today</p>
+<h2 style="font-family:Fraunces, Georgia, serif;font-size:74px;font-weight:600;line-height:1.1">Everything is in place except a sale</h2>
+</div>
+<div style="display:flex;gap:26px">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FBF7EF;padding:36px;border:1px solid #DDD6C7;border-radius:18px">
+<h3 style="font-size:32px;font-weight:700;color:#3A5940">Registered brand</h3>
+<p style="font-size:27px;line-height:1.45;color:#6B7566">The name and the logo are trademarked and paid for.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FBF7EF;padding:36px;border:1px solid #DDD6C7;border-radius:18px">
+<h3 style="font-size:32px;font-weight:700;color:#3A5940">A live site</h3>
+<p style="font-size:27px;line-height:1.45;color:#6B7566">Online, with a product grid, a mission page and an active TikTok.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FBF7EF;padding:36px;border:1px solid #DDD6C7;border-radius:18px">
+<h3 style="font-size:32px;font-weight:700;color:#3A5940">Real stock</h3>
+<p style="font-size:27px;line-height:1.45;color:#6B7566">Inventory the owner bought with her own savings.</p>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:44px;background:#D96BA0;padding:44px 52px;border-radius:18px">
+<h3 style="font-family:Fraunces, Georgia, serif;font-size:130px;font-weight:700;line-height:1;color:#1E2A20">0</h3>
+<p style="font-size:38px;font-weight:600;line-height:1.3;color:#1E2A20;flex:1">completed transactions since 2019. The payment system has never released money into the business account.</p>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;font-size:24px;color:#8E9389">Sources: storkwings.com, reviewed October 28, 2026; interview with the project manager, September 30, 2026.</p>
+
+</section>
+<section id="walls"  style="background:#F3EEE3;color:#1E2A20;font-family:Karla, Verdana, sans-serif;padding:128px;display:flex;flex-direction:column;gap:44px">
+<div style="display:flex;flex-direction:column;gap:14px">
+<p style="font-size:28px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#D96BA0">Why it never started</p>
+<h2 style="font-family:Fraunces, Georgia, serif;font-size:74px;font-weight:600;line-height:1.1">Three walls, and none of them is marketing</h2>
+</div>
+<div style="display:flex;flex-direction:column;gap:22px">
+<div style="display:flex;align-items:center;gap:36px;background:#FBF7EF;padding:36px 44px;border:1px solid #DDD6C7;border-radius:18px">
+<h3 style="font-family:Fraunces, Georgia, serif;font-size:60px;font-weight:700;color:#D96BA0;width:68px">1</h3>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:36px;font-weight:700">The merchandise costs too much to import</h3>
+<p style="font-size:29px;line-height:1.4;color:#6B7566">Most of the supply comes from China, and tariffs made that route expensive. Buying stock abroad stopped being a business.</p>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:36px;background:#FBF7EF;padding:36px 44px;border:1px solid #DDD6C7;border-radius:18px">
+<h3 style="font-family:Fraunces, Georgia, serif;font-size:60px;font-weight:700;color:#D96BA0;width:68px">2</h3>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:36px;font-weight:700">The money cannot leave the platform</h3>
+<p style="font-size:29px;line-height:1.4;color:#6B7566">Payments are held by the website provider. Even if a customer bought today, the cash would not reach the business account.</p>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:36px;background:#FBF7EF;padding:36px 44px;border:1px solid #DDD6C7;border-radius:18px">
+<h3 style="font-family:Fraunces, Georgia, serif;font-size:60px;font-weight:700;color:#D96BA0;width:68px">3</h3>
+<div style="flex:1;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:36px;font-weight:700">The capital is already spent and frozen</h3>
+<p style="font-size:29px;line-height:1.4;color:#6B7566">The stock was paid for out of personal savings and has produced nothing. There is no second round to spend.</p>
+</div>
+</div>
+</div>
+<p style="font-size:30px;line-height:1.4;color:#3A5940;font-weight:600">Walls one and three are the same wall seen twice: this company cannot finance inventory. Any model that requires buying stock before selling it is already dead here.</p>
+
+</section>
+<section id="revamp"  style="background:#FBF7EF;color:#1E2A20;font-family:Karla, Verdana, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:44px">
+<div style="display:flex;flex-direction:column;gap:14px">
+<p style="font-size:28px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#D96BA0">What the group rebuilt</p>
+<h2 style="font-family:Fraunces, Georgia, serif;font-size:74px;font-weight:600;line-height:1.1">We already narrowed the storefront</h2>
+</div>
+<table style="font-family:Karla, Verdana, sans-serif;font-size:28px;color:#1E2A20;padding:16px 20px">
+<tr style="background:#1E2A20"><th style="width:22%;color:#FBF7EF;text-align:left;font-size:27px">&nbsp;</th><th style="width:39%;color:#FBF7EF;text-align:left;font-size:27px">storkwings.com today</th><th style="width:39%;color:#FBF7EF;text-align:left;font-size:27px">The rebuilt storefront</th></tr>
+<tr><td style="font-weight:700">The promise</td><td style="color:#6B7566">&ldquo;Eco-Friendly Fashion for Families&rdquo;</td><td>&ldquo;Clothes your kids grow through, not out of the budget&rdquo;</td></tr>
+<tr style="background:#F3EEE3"><td style="font-weight:700">Who it is for</td><td style="color:#6B7566">Kids, women, men and babies</td><td>Kids, babies and women</td></tr>
+<tr><td style="font-weight:700">What it sells</td><td style="color:#6B7566">Clothing, vintage, essentials and electronics</td><td>Clothing and shoes only</td></tr>
+<tr style="background:#F3EEE3"><td style="font-weight:700">The products</td><td style="color:#6B7566">Stock photography, no prices</td><td>Real pieces with real prices, from $5</td></tr>
+<tr><td style="font-weight:700">The scale</td><td style="color:#6B7566">Unstated</td><td>&ldquo;15 pieces in stock right now&rdquo;</td></tr>
+<tr style="background:#F3EEE3"><td style="font-weight:700">The cause</td><td style="color:#6B7566">Mental health and substance abuse, broadly</td><td>Attorney fees, safe housing, rehabilitation</td></tr>
+</table>
+<p style="font-size:30px;line-height:1.4;color:#3A5940;font-weight:600">Dropping men and electronics was the right call, and saying &ldquo;15 pieces&rdquo; out loud builds more trust than pretending to be a catalogue.</p>
+<p style="position:absolute;left:128px;bottom:64px;font-size:24px;color:#8E9389">Both sites reviewed October 28, 2026.</p>
+
+</section>
+<section id="improve"  style="background:#F3EEE3;color:#1E2A20;font-family:Karla, Verdana, sans-serif;padding:128px;display:flex;flex-direction:column;gap:44px">
+<div style="display:flex;flex-direction:column;gap:14px">
+<p style="font-size:28px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#D96BA0">What we want to improve</p>
+<h2 style="font-family:Fraunces, Georgia, serif;font-size:74px;font-weight:600;line-height:1.1">Five fixes, in the order they block each other</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:24px">
+<div style="display:flex;flex-direction:column;gap:10px;background:#FBF7EF;padding:34px;border:1px solid #DDD6C7;border-radius:18px">
+<h3 style="font-size:31px;font-weight:700;color:#3A5940">1 &middot; The money has to arrive</h3>
+<p style="font-size:27px;line-height:1.45;color:#6B7566">Nothing else matters while payments sit inside the website provider. A processor that settles into the business account comes first.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#FBF7EF;padding:34px;border:1px solid #DDD6C7;border-radius:18px">
+<h3 style="font-size:31px;font-weight:700;color:#3A5940">2 &middot; One audience, not four</h3>
+<p style="font-size:27px;line-height:1.45;color:#6B7566">Men and electronics left the storefront. The brand is a stork. It should be allowed to mean children.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#FBF7EF;padding:34px;border:1px solid #DDD6C7;border-radius:18px">
+<h3 style="font-size:31px;font-weight:700;color:#3A5940">3 &middot; Stop owning the stock</h3>
+<p style="font-size:27px;line-height:1.45;color:#6B7566">Every dollar of inventory is a dollar the company does not have. The seller should own the item until the buyer pays.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#FBF7EF;padding:34px;border:1px solid #DDD6C7;border-radius:18px">
+<h3 style="font-size:31px;font-weight:700;color:#3A5940">4 &middot; Contact that looks like a company</h3>
+<p style="font-size:27px;line-height:1.45;color:#6B7566">A free mail account on a trademarked domain costs nothing to fix and costs trust every day it stays.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#D96BA0;padding:34px;border-radius:18px;grid-column:span 2">
+<h3 style="font-size:31px;font-weight:700;color:#1E2A20">5 &middot; A cause that matches the customer</h3>
+<p style="font-size:27px;line-height:1.45;color:#1E2A20">The buyer is a parent. The giving should be about families, not a separate programme that has nothing to do with the person holding the basket.</p>
+</div>
+</div>
+
+</section>
+<section id="opportunity"  style="background:#1E2A20;color:#FBF7EF;font-family:Karla, Verdana, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:44px">
+<div style="display:flex;flex-direction:column;gap:14px">
+<p style="font-size:28px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#D96BA0">The opportunity</p>
+<h2 style="font-family:Fraunces, Georgia, serif;font-size:74px;font-weight:600;line-height:1.1">Buying secondhand already became normal in the United States</h2>
+</div>
+<div style="display:flex;gap:24px">
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;background:#263528;padding:36px;border-radius:18px;border:1px solid #3A5940">
+<h3 style="font-family:Fraunces, Georgia, serif;font-size:72px;font-weight:700;color:#D96BA0;line-height:1">$78.8B</h3>
+<p style="font-size:26px;line-height:1.4;color:#9FAE9B">projected size of the US secondhand apparel market by 2030</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;background:#263528;padding:36px;border-radius:18px;border:1px solid #3A5940">
+<h3 style="font-family:Fraunces, Georgia, serif;font-size:72px;font-weight:700;color:#D96BA0;line-height:1">19%</h3>
+<p style="font-size:26px;line-height:1.4;color:#9FAE9B">growth in US secondhand apparel during 2025, its fastest pace since 2021</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;background:#263528;padding:36px;border-radius:18px;border:1px solid #3A5940">
+<h3 style="font-family:Fraunces, Georgia, serif;font-size:72px;font-weight:700;color:#D96BA0;line-height:1">4&times;</h3>
+<p style="font-size:26px;line-height:1.4;color:#9FAE9B">faster than clothing retail overall grew in the same year</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;background:#263528;padding:36px;border-radius:18px;border:1px solid #3A5940">
+<h3 style="font-family:Fraunces, Georgia, serif;font-size:72px;font-weight:700;color:#D96BA0;line-height:1">70%</h3>
+<p style="font-size:26px;line-height:1.4;color:#9FAE9B">of growth to 2030 expected to come from Gen Z and millennials</p>
+</div>
+</div>
+<p style="font-size:34px;line-height:1.4;color:#C3CFBF;width:1620px">We are not asking anyone to change their habits. Young parents already buy their children&rsquo;s clothes secondhand, and they already resell what no longer fits. Stork Wings only has to be the place where those two people meet.</p>
+<p style="position:absolute;left:128px;bottom:64px;font-size:24px;color:#8E9389">Source: ThredUp 2026 Resale Report, with market projections by GlobalData, published April 2026. The report does not break out a children&rsquo;s figure.</p>
+
+</section>
+<section id="pivot"  style="background:#1E2A20;color:#FBF7EF;font-family:Karla, Verdana, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:center;gap:56px">
+<div style="display:flex;flex-direction:column;gap:18px">
+<p style="font-size:28px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#D96BA0">The proposal</p>
+<h2 style="font-family:Fraunces, Georgia, serif;font-size:94px;font-weight:600;line-height:1.08;width:1560px">Stop selling clothes. Start being the place the clothes pass through.</h2>
+</div>
+<div style="display:flex;gap:28px">
+<div style="flex:1;display:flex;flex-direction:column;gap:14px;background:#263528;padding:40px;border-radius:18px;border:1px solid #3A5940">
+<h3 style="font-size:32px;font-weight:700;color:#C3CFBF">Today the company buys</h3>
+<p style="font-size:28px;line-height:1.45;color:#9FAE9B">It pays for stock, stores it, and only then finds out whether anybody wanted it. The money leaves first.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:14px;background:#D96BA0;padding:40px;border-radius:18px">
+<h3 style="font-size:32px;font-weight:700;color:#1E2A20">Tomorrow it connects</h3>
+<p style="font-size:28px;line-height:1.45;color:#1E2A20">Families list the clothes their children have outgrown. The buyer pays first. The company keeps a share and never owns a thing.</p>
+</div>
+</div>
+<p style="font-size:34px;line-height:1.4;color:#C3CFBF;width:1560px">This is the model our professor named in the interview when we proposed it: <b style="color:#FBF7EF">just-in-time inventory</b>. Walmart sells shelf space and never buys the product. Kmart and Sears bought the product, and when nobody wanted it they were the ones holding it.</p>
+
+</section>
+<section id="why-kids"  style="background:#F3EEE3;color:#1E2A20;font-family:Karla, Verdana, sans-serif;padding:128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:28px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#D96BA0">Why children only</p>
+<h2 style="font-family:Fraunces, Georgia, serif;font-size:72px;font-weight:600;line-height:1.1">Narrowing to children is not marketing. It is what makes the operation work.</h2>
+</div>
+<div style="display:flex;gap:24px">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FBF7EF;padding:36px;border:1px solid #DDD6C7;border-radius:18px">
+<h3 style="font-size:32px;font-weight:700;color:#3A5940">Children outgrow clothes before they wear them out</h3>
+<p style="font-size:27px;line-height:1.45;color:#6B7566">An adult wears a coat until it is ruined. A two-year-old wears one for a season and it is still nearly new. The condition risk that threatens any resale model is structurally smaller here.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FBF7EF;padding:36px;border:1px solid #DDD6C7;border-radius:18px">
+<h3 style="font-size:32px;font-weight:700;color:#3A5940">Children&rsquo;s clothes sell in bundles</h3>
+<p style="font-size:27px;line-height:1.45;color:#6B7566">A parent does not need one shirt. They need the whole next size. A lot of twelve pieces carries the shipping cost that a single eight-dollar shirt never could.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FBF7EF;padding:36px;border:1px solid #DDD6C7;border-radius:18px">
+<h3 style="font-size:32px;font-weight:700;color:#3A5940">The seller and the buyer are the same person</h3>
+<p style="font-size:27px;line-height:1.45;color:#6B7566">Every few months a size stops fitting and the next one is needed. That parent supplies the marketplace and shops it, on a cycle, for years.</p>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:36px;background:#D96BA0;padding:40px 48px;border-radius:18px">
+<p style="font-size:33px;font-weight:600;line-height:1.35;color:#1E2A20;flex:1">And the name finally does work. A stork carries babies. Used on a store that also sells electronics, the best asset this company owns means nothing.</p>
+</div>
+
+</section>
+<section id="phases"  style="background:#FBF7EF;color:#1E2A20;font-family:Karla, Verdana, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:28px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#D96BA0">How we get there</p>
+<h2 style="font-family:Fraunces, Georgia, serif;font-size:72px;font-weight:600;line-height:1.1">Three phases, and the storefront we built is phase one</h2>
+</div>
+<div style="display:flex;gap:24px">
+<div style="flex:1;display:flex;flex-direction:column;gap:14px;background:#F3EEE3;padding:36px;border:2px solid #3A5940;border-radius:18px">
+<p style="font-size:25px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#3A5940">Phase 1 &middot; now</p>
+<h3 style="font-size:34px;font-weight:700">Sell what is already here</h3>
+<p style="font-size:26px;line-height:1.45;color:#6B7566">The fifteen pieces she already owns. Fix the checkout, prove the money reaches the account, learn what shipping really costs.</p>
+<p style="font-size:26px;line-height:1.4;color:#3A5940;font-weight:600">Proves: the plumbing works.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:14px;background:#F3EEE3;padding:36px;border:1px solid #DDD6C7;border-radius:18px">
+<p style="font-size:25px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#6B7566">Phase 2</p>
+<h3 style="font-size:34px;font-weight:700">Let other families list</h3>
+<p style="font-size:26px;line-height:1.45;color:#6B7566">Same photographs, same promise, same inspection. The only change is that the clothes belong to somebody else and the company takes a share.</p>
+<p style="font-size:26px;line-height:1.4;color:#3A5940;font-weight:600">Proves: supply arrives without capital.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:14px;background:#F3EEE3;padding:36px;border:1px solid #DDD6C7;border-radius:18px">
+<p style="font-size:25px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#6B7566">Phase 3</p>
+<h3 style="font-size:34px;font-weight:700">Open the bidding</h3>
+<p style="font-size:26px;line-height:1.45;color:#6B7566">A posted price to buy now, or offers that climb from a floor, with the seller deciding whether to accept.</p>
+<p style="font-size:26px;line-height:1.4;color:#3A5940;font-weight:600">Proves: the market can price it.</p>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:36px;background:#1E2A20;padding:38px 46px;border-radius:18px">
+<p style="font-size:31px;line-height:1.4;color:#FBF7EF;flex:1">The promise on the site never changes across the three phases: <b style="color:#D96BA0">every item checked by hand</b>. The only thing that changes is who owns the clothes.</p>
+</div>
+
+</section>
+<section id="how-it-works"  style="background:#F3EEE3;color:#1E2A20;font-family:Karla, Verdana, sans-serif;padding:128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:28px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#D96BA0">The process</p>
+<h2 style="font-family:Fraunces, Georgia, serif;font-size:72px;font-weight:600;line-height:1.1">One bundle, from a closet to a doorstep</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(4, 1fr);gap:20px">
+<div style="display:flex;flex-direction:column;gap:10px;background:#FBF7EF;padding:30px;border:1px solid #DDD6C7;border-radius:16px">
+<h3 style="font-family:Fraunces, Georgia, serif;font-size:46px;font-weight:700;color:#D96BA0;line-height:1">1</h3>
+<h3 style="font-size:28px;font-weight:700">A parent lists</h3>
+<p style="font-size:25px;line-height:1.4;color:#6B7566">Photos, size, condition. A bundle, not a single shirt.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#FBF7EF;padding:30px;border:1px solid #DDD6C7;border-radius:16px">
+<h3 style="font-family:Fraunces, Georgia, serif;font-size:46px;font-weight:700;color:#D96BA0;line-height:1">2</h3>
+<h3 style="font-size:28px;font-weight:700">A buyer pays</h3>
+<p style="font-size:25px;line-height:1.4;color:#6B7566">Stork Wings holds the money. Nothing has moved yet.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#FBF7EF;padding:30px;border:1px solid #DDD6C7;border-radius:16px">
+<h3 style="font-family:Fraunces, Georgia, serif;font-size:46px;font-weight:700;color:#D96BA0;line-height:1">3</h3>
+<h3 style="font-size:28px;font-weight:700">The seller ships in</h3>
+<p style="font-size:25px;line-height:1.4;color:#6B7566">To the inspection point, with a label the platform provides.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#D96BA0;padding:30px;border-radius:16px">
+<h3 style="font-family:Fraunces, Georgia, serif;font-size:46px;font-weight:700;color:#1E2A20;line-height:1">4</h3>
+<h3 style="font-size:28px;font-weight:700;color:#1E2A20">We check it</h3>
+<p style="font-size:25px;line-height:1.4;color:#1E2A20">Against the photos and the description. This is the whole promise.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#FBF7EF;padding:30px;border:1px solid #DDD6C7;border-radius:16px">
+<h3 style="font-family:Fraunces, Georgia, serif;font-size:46px;font-weight:700;color:#D96BA0;line-height:1">5</h3>
+<h3 style="font-size:28px;font-weight:700">We ship out</h3>
+<p style="font-size:25px;line-height:1.4;color:#6B7566">Repacked, to the buyer, with tracking.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#FBF7EF;padding:30px;border:1px solid #DDD6C7;border-radius:16px">
+<h3 style="font-family:Fraunces, Georgia, serif;font-size:46px;font-weight:700;color:#D96BA0;line-height:1">6</h3>
+<h3 style="font-size:28px;font-weight:700">The seller is paid</h3>
+<p style="font-size:25px;line-height:1.4;color:#6B7566">Only after it passes and ships. The company keeps its share.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#FBF7EF;padding:30px;border:1px solid #DDD6C7;border-radius:16px">
+<h3 style="font-size:28px;font-weight:700;color:#3A5940">If it fails</h3>
+<p style="font-size:25px;line-height:1.4;color:#6B7566">The buyer is refunded. Who pays the return leg is a rule we still have to write.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#FBF7EF;padding:30px;border:1px solid #DDD6C7;border-radius:16px">
+<h3 style="font-size:28px;font-weight:700;color:#3A5940">The flow unit</h3>
+<p style="font-size:25px;line-height:1.4;color:#6B7566">One bundle. Everything we measure is measured per bundle.</p>
+</div>
+</div>
+
+</section>
+<section id="pricing"  style="background:#FBF7EF;color:#1E2A20;font-family:Karla, Verdana, sans-serif;padding:128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:28px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#D96BA0">How the price is set</p>
+<h2 style="font-family:Fraunces, Georgia, serif;font-size:72px;font-weight:600;line-height:1.1">Two ways to buy, and the seller always has the last word</h2>
+</div>
+<div style="display:flex;gap:26px">
+<div style="flex:1;display:flex;flex-direction:column;gap:14px;background:#3A5940;padding:40px;border-radius:18px">
+<h3 style="font-size:36px;font-weight:700;color:#FBF7EF">Buy it now</h3>
+<p style="font-size:28px;line-height:1.45;color:#C3CFBF">A price the seller posted. The buyer pays it and the bundle is theirs. No waiting, no auction, no uncertainty.</p>
+<p style="font-size:27px;line-height:1.4;color:#FBF7EF;font-weight:600">This is what makes day one work, before there is enough traffic for bidding.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:14px;background:#F3EEE3;padding:40px;border:1px solid #DDD6C7;border-radius:18px">
+<h3 style="font-size:36px;font-weight:700;color:#1E2A20">Or make an offer</h3>
+<p style="font-size:28px;line-height:1.45;color:#6B7566">Bidding climbs from a floor the seller sets. When it closes, the seller sees the winning offer and decides whether to take it.</p>
+<p style="font-size:27px;line-height:1.4;color:#3A5940;font-weight:600">Nobody is ever forced to sell their child&rsquo;s clothes below what they would accept.</p>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#D96BA0;padding:38px 46px;border-radius:18px">
+<h3 style="font-size:33px;font-weight:700;color:#1E2A20">Why the seller accepting matters operationally</h3>
+<p style="font-size:29px;line-height:1.45;color:#1E2A20">The hardest thing to recruit is the first seller. A parent uploading their child&rsquo;s clothes for the first time is afraid of two things: that it sells for nothing, and that they get cheated. The floor removes the first fear and the final acceptance removes the second. Supply is the scarce resource here, so the rules should favour the supplier.</p>
+</div>
+
+</section>
+<section id="inspection"  style="background:#F3EEE3;color:#1E2A20;font-family:Karla, Verdana, sans-serif;padding:128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:28px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#D96BA0">The inspection point</p>
+<h2 style="font-family:Fraunces, Georgia, serif;font-size:72px;font-weight:600;line-height:1.1">The whole brand lives in one room</h2>
+</div>
+<div style="display:flex;gap:26px">
+<div style="flex:1;display:flex;flex-direction:column;gap:14px;background:#FBF7EF;padding:38px;border:1px solid #DDD6C7;border-radius:18px">
+<h3 style="font-size:34px;font-weight:700;color:#3A5940">Why it exists</h3>
+<p style="font-size:27px;line-height:1.45;color:#6B7566">The clothes come from a stranger&rsquo;s home. Without somebody opening the box, the company is promising a condition it has never seen. One bad bundle on social media costs more than a hundred good ones earn.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:14px;background:#FBF7EF;padding:38px;border:1px solid #DDD6C7;border-radius:18px">
+<h3 style="font-size:34px;font-weight:700;color:#3A5940">Where it starts</h3>
+<p style="font-size:27px;line-height:1.45;color:#6B7566">In a house. A table, good light, a scale, a printer and a phone camera. The volume at phase one does not justify anything larger, and pretending otherwise burns money the company does not have.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:14px;background:#FBF7EF;padding:38px;border:1px solid #DDD6C7;border-radius:18px">
+<h3 style="font-size:34px;font-weight:700;color:#3A5940">When it has to move</h3>
+<p style="font-size:27px;line-height:1.45;color:#6B7566">When bundles arrive faster than one person can open, check, repack and ship them. That is the moment the queue starts growing and every order waits longer.</p>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#1E2A20;padding:38px 46px;border-radius:18px">
+<h3 style="font-size:33px;font-weight:700;color:#FBF7EF">This is the bottleneck, and we should name it before it bites</h3>
+<p style="font-size:29px;line-height:1.45;color:#C3CFBF">Nothing in the process can move faster than this room. Advertising harder, listing more bundles or improving the website raises the inflow without raising the outflow, and the only result is a bigger pile and a slower delivery. The number to measure from day one is how many bundles one person can clear in a day.</p>
+</div>
+
+</section>
+<section id="family"  style="background:#1E2A20;color:#FBF7EF;font-family:Karla, Verdana, sans-serif;padding:128px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:28px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#D96BA0">The giving arm</p>
+<h2 style="font-family:Fraunces, Georgia, serif;font-size:72px;font-weight:600;line-height:1.1">Under the Wings &mdash; support for families, funded by what the marketplace earns</h2>
+</div>
+<div style="display:flex;gap:26px">
+<div style="flex:1;display:flex;flex-direction:column;gap:14px;background:#263528;padding:38px;border-radius:18px;border:1px solid #3A5940">
+<h3 style="font-size:33px;font-weight:700;color:#C3CFBF">What changed</h3>
+<p style="font-size:27px;line-height:1.45;color:#9FAE9B">The current site gives to substance abuse programmes. That is worth doing, but it is not what the person holding the basket came for. We propose widening it to the family as a whole.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:14px;background:#263528;padding:38px;border-radius:18px;border:1px solid #3A5940">
+<h3 style="font-size:33px;font-weight:700;color:#C3CFBF">What it covers</h3>
+<p style="font-size:27px;line-height:1.45;color:#9FAE9B">Counselling for families under strain, parenting support, help for a household in crisis, and awareness so a family asks for help before it breaks.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:14px;background:#D96BA0;padding:38px;border-radius:18px">
+<h3 style="font-size:33px;font-weight:700;color:#1E2A20">Why it fits</h3>
+<p style="font-size:27px;line-height:1.45;color:#1E2A20">Every customer is a parent. Every seller is a parent. A programme for families speaks to the same person the business already serves, in the same sentence.</p>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:40px;background:#263528;padding:38px 46px;border-radius:18px;border:1px solid #3A5940">
+<p style="font-size:30px;line-height:1.45;color:#C3CFBF;flex:1">Funded the way the owner described it: a share of the <b style="color:#FBF7EF">profit</b> on each sale, not of the price. Giving away a percentage of revenue on a five-dollar bundle would cost more than the bundle earns, and a programme that bankrupts the business helps nobody.</p>
+</div>
+<p style="font-size:26px;line-height:1.4;color:#8E9389">&ldquo;Under the Wings&rdquo; is our proposed name for the programme and is not yet decided. The percentage is still open.</p>
+
+</section>
+<section id="numbers"  style="background:#FBF7EF;color:#1E2A20;font-family:Karla, Verdana, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:36px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:28px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#D96BA0">The economics</p>
+<h2 style="font-family:Fraunces, Georgia, serif;font-size:72px;font-weight:600;line-height:1.1">Why it has to be a bundle, in one table</h2>
+</div>
+<table style="font-family:Karla, Verdana, sans-serif;font-size:28px;color:#1E2A20;padding:16px 20px">
+<tr style="background:#1E2A20"><th style="width:34%;color:#FBF7EF;text-align:left;font-size:27px">Per order</th><th style="width:33%;color:#FBF7EF;text-align:left;font-size:27px">A single $8 item</th><th style="width:33%;color:#FBF7EF;text-align:left;font-size:27px">A 12-piece bundle at $40</th></tr>
+<tr><td style="font-weight:700">Seller to inspection</td><td style="color:#6B7566">$3.00</td><td>$3.00</td></tr>
+<tr style="background:#F3EEE3"><td style="font-weight:700">Inspection to buyer</td><td style="color:#6B7566">$3.00</td><td>$3.00</td></tr>
+<tr><td style="font-weight:700">Shipping, both legs</td><td style="color:#6B7566">$6.00</td><td>$6.00</td></tr>
+<tr style="background:#F3EEE3"><td style="font-weight:700">Shipping as a share of the sale</td><td style="color:#C7542B;font-weight:700">75%</td><td style="color:#3A5940;font-weight:700">15%</td></tr>
+<tr><td style="font-weight:700">Left for seller, platform and cause</td><td style="color:#C7542B;font-weight:700">$2.00</td><td style="color:#3A5940;font-weight:700">$34.00</td></tr>
+</table>
+<div style="display:flex;gap:24px">
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;background:#F3EEE3;padding:32px;border:1px solid #DDD6C7;border-radius:18px">
+<h3 style="font-size:30px;font-weight:700;color:#3A5940">The same $6 either way</h3>
+<p style="font-size:26px;line-height:1.4;color:#6B7566">Two shipping legs cost roughly the same whether the box holds one shirt or twelve. Only the sale price changes.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;background:#F3EEE3;padding:32px;border:1px solid #DDD6C7;border-radius:18px">
+<h3 style="font-size:30px;font-weight:700;color:#3A5940">So bundles are not a preference</h3>
+<p style="font-size:26px;line-height:1.4;color:#6B7566">They are the condition under which an inspected, two-leg process can exist at all at these prices.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:10px;background:#F3EEE3;padding:32px;border:1px solid #DDD6C7;border-radius:18px">
+<h3 style="font-size:30px;font-weight:700;color:#3A5940">And single items ship direct</h3>
+<p style="font-size:26px;line-height:1.4;color:#6B7566">Below a price we still have to set, the item goes straight from seller to buyer with no inspection, the way eBay routes only its expensive categories.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;font-size:24px;color:#8E9389">The $3.00 per leg is the owner&rsquo;s own USPS rate for a five-pound ground parcel, given in the September 30 interview. The $8 item and the $40 bundle are illustrative figures chosen to show the effect, not observed sales.</p>
+
+</section>
+<section id="start"  style="background:#F3EEE3;color:#1E2A20;font-family:Karla, Verdana, sans-serif;padding:128px;display:flex;flex-direction:column;gap:38px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:28px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#D96BA0">What it takes to start</p>
+<h2 style="font-family:Fraunces, Georgia, serif;font-size:72px;font-weight:600;line-height:1.1">Six steps to the first completed sale in six years</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:22px">
+<div style="display:flex;flex-direction:column;gap:10px;background:#FBF7EF;padding:32px;border:1px solid #DDD6C7;border-radius:16px">
+<h3 style="font-size:29px;font-weight:700;color:#3A5940">1 &middot; A payment processor that pays out</h3>
+<p style="font-size:26px;line-height:1.4;color:#6B7566">Settling into the business account, tested with one real transaction before anything else is announced.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#FBF7EF;padding:32px;border:1px solid #DDD6C7;border-radius:16px">
+<h3 style="font-size:29px;font-weight:700;color:#3A5940">2 &middot; The fifteen pieces listed properly</h3>
+<p style="font-size:26px;line-height:1.4;color:#6B7566">Grouped into bundles by size, photographed the way the new storefront already does it.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#FBF7EF;padding:32px;border:1px solid #DDD6C7;border-radius:16px">
+<h3 style="font-size:29px;font-weight:700;color:#3A5940">3 &middot; A written condition standard</h3>
+<p style="font-size:26px;line-height:1.4;color:#6B7566">What passes and what does not, on one page, so the check is the same every time and by anyone.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#FBF7EF;padding:32px;border:1px solid #DDD6C7;border-radius:16px">
+<h3 style="font-size:29px;font-weight:700;color:#3A5940">4 &middot; The return rule, decided</h3>
+<p style="font-size:26px;line-height:1.4;color:#6B7566">Who pays when a bundle fails inspection. Today the site says no returns at all, which will not survive the first complaint.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#FBF7EF;padding:32px;border:1px solid #DDD6C7;border-radius:16px">
+<h3 style="font-size:29px;font-weight:700;color:#3A5940">5 &middot; A company email address</h3>
+<p style="font-size:26px;line-height:1.4;color:#6B7566">On the domain the company already owns. Costs almost nothing and is the cheapest trust the brand can buy.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#D96BA0;padding:32px;border-radius:16px">
+<h3 style="font-size:29px;font-weight:700;color:#1E2A20">6 &middot; One sale, start to finish</h3>
+<p style="font-size:26px;line-height:1.4;color:#1E2A20">Listed, paid, shipped, received, money in the account. Everything else is a plan until this happens once.</p>
+</div>
+</div>
+<p style="font-size:30px;line-height:1.4;color:#3A5940;font-weight:600">None of these six requires buying inventory, hiring anyone or raising money.</p>
+
+</section>
+<section id="decide"  style="background:#1E2A20;color:#FBF7EF;font-family:Karla, Verdana, sans-serif;padding:128px;display:flex;flex-direction:column;justify-content:space-between">
+<div style="display:flex;flex-direction:column;gap:30px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:28px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#D96BA0">What we need decided</p>
+<h2 style="font-family:Fraunces, Georgia, serif;font-size:76px;font-weight:600;line-height:1.1">Four questions only the owner can answer</h2>
+</div>
+<div style="display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;align-items:center;gap:32px;background:#263528;padding:30px 40px;border-radius:16px;border:1px solid #3A5940">
+<h3 style="font-family:Fraunces, Georgia, serif;font-size:44px;font-weight:700;color:#D96BA0;width:56px">1</h3>
+<p style="font-size:31px;line-height:1.35;color:#C3CFBF;flex:1">Children only, or keep selling to women as well? Everything we modelled assumes children first.</p>
+</div>
+<div style="display:flex;align-items:center;gap:32px;background:#263528;padding:30px 40px;border-radius:16px;border:1px solid #3A5940">
+<h3 style="font-family:Fraunces, Georgia, serif;font-size:44px;font-weight:700;color:#D96BA0;width:56px">2</h3>
+<p style="font-size:31px;line-height:1.35;color:#C3CFBF;flex:1">What does the company keep on each sale, and is it a percentage, a flat fee, or a percentage with a floor and a ceiling?</p>
+</div>
+<div style="display:flex;align-items:center;gap:32px;background:#263528;padding:30px 40px;border-radius:16px;border:1px solid #3A5940">
+<h3 style="font-family:Fraunces, Georgia, serif;font-size:44px;font-weight:700;color:#D96BA0;width:56px">3</h3>
+<p style="font-size:31px;line-height:1.35;color:#C3CFBF;flex:1">Above what price does a bundle go through inspection, and below what price does it ship straight from the seller?</p>
+</div>
+<div style="display:flex;align-items:center;gap:32px;background:#263528;padding:30px 40px;border-radius:16px;border:1px solid #3A5940">
+<h3 style="font-family:Fraunces, Georgia, serif;font-size:44px;font-weight:700;color:#D96BA0;width:56px">4</h3>
+<p style="font-size:31px;line-height:1.35;color:#C3CFBF;flex:1">Where is the inspection room, and who opens the boxes when there are five a day instead of one?</p>
+</div>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:36px;background:#D96BA0;padding:40px 48px;border-radius:18px">
+<p style="font-family:Fraunces, Georgia, serif;font-size:40px;font-weight:600;line-height:1.3;color:#1E2A20;flex:1">The brand, the website and the mission have been ready since 2019. What has been missing is a process. That is the part we can build without money.</p>
+</div>
+
+</section></div></div>
+<div id="bar">
+  <div><button id="prev">&larr; Prev</button> <button id="next">Next &rarr;</button></div>
+  <div class="mid"><span id="count"></span><button id="toggle">Speaker notes</button></div>
+  <div>Stork Wings group &middot; MA50200</div>
+</div>
+<div id="notes"></div>
+<script>
+const NOTES = ["Open with the fact that frames everything. The brand has existed since 2019 and has never completed a single sale. This is not a turnaround of a struggling operation, because there is no operation yet. That is exactly why the model is still ours to choose. Credit the group here by name before going further.", "This is the slide that justifies the whole project. Most operations studies examine a process that already runs and look for waste inside it. Here there is nothing to measure yet, so every decision is still open and every one of them will set the flow time, the cost per order and the quality for years.", "Land the last line slowly. It is the sentence that selects the business model for us. We are not choosing a marketplace because marketplaces are fashionable. We are choosing it because the one thing this company cannot do is pay for goods before a customer pays for them.", "Give the group credit here explicitly. This comparison is their work, not a consultant's recommendation. Point at the row for scale: a small shop that admits it is small reads as honest, and honesty is the only competitive asset a company with fifteen items actually has.", "Stress the ordering. These are not five parallel tasks. Fix one and three or there is no business at all; fix two and five and there is a brand worth coming back to; fix four this week because it is free. If the group only has time for one, it is the payment processor.", "Be precise about what these numbers do and do not say. They show that the category is growing and who is driving it. They do not prove that a children's marketplace succeeds, and the report publishes no children-specific figure, so do not claim one. The argument on the next slide is structural, not statistical.", "This is the hinge of the presentation. The company has no working capital, so the only viable model is one where the customer's money arrives before the company owes anybody anything. Note that the just-in-time framing came from the professor in the September 30 interview, in response to the group's proposal.", "The third point is the one that answers the hardest question in any marketplace, which is where supply and demand come from at the same time. In most marketplaces you have to recruit two different populations. Here it is one parent, playing both roles, on a schedule set by how fast their child grows.", "Be honest that the site as it stands today describes phase one, where the company owns the stock. That is deliberate, not an oversight. Selling fifteen items the company already paid for is the cheapest possible test of whether the checkout, the shipping and the customer promise actually work, and none of that has ever been tested.", "The order of steps two and three is the entire financial argument. The buyer pays before the seller ships, so money always enters before any obligation leaves. A company with no working capital can run this process. It could not run the same process with the steps reversed.", "Note that pricing is also an operations decision, not only a commercial one. Pricing unique secondhand items by hand is the most expensive step in intake for every company in this industry. Letting the seller post the price and the market test it removes that cost entirely from a company that has nobody to do it.", "This is where the operations content of the course shows up most directly. Inflow greater than outflow means inventory accumulates, and accumulated inventory means a longer flow time for every order in the queue. Promise the professor a measured figure for this in the final paper rather than an estimate.", "Two honest notes. The name is a proposal, not a decision, and the percentage has not been set. Also say plainly that a formal nonprofit status is a separate and later question: the owner raised it in the interview, and it generally requires an operating history the company does not have yet.", "Be explicit that only one number here is real. Three dollars a leg came from the owner. The eight-dollar item and the forty-dollar bundle are made up to show the shape of the problem, and saying so is better than being asked.", "End this slide on the last line. The point of the whole proposal is that the path to the first sale is made of decisions and small fixes, not of capital. That is what makes it realistic for this company rather than a plan for a company that does not exist.", "Close on the last line and stop. Do not summarise the deck. The four questions are the ask, and the sentence underneath is the argument for why this group spent the term on it. Then hand it to the owner and the professor for the decisions."];
+const slides = [...document.querySelectorAll('#canvas > section')];
+let i = 0;
+const canvas = document.getElementById('canvas');
+const notesEl = document.getElementById('notes');
+function fit(){
+  const pad = 24, barH = 56 + (notesEl.classList.contains('on') ? notesEl.offsetHeight : 0);
+  const s = Math.min((innerWidth - pad*2)/1920, (innerHeight - barH - pad*2)/1080);
+  canvas.style.transform = 'scale(' + s + ')';
+}
+function show(n){
+  i = (n + slides.length) % slides.length;
+  slides.forEach((s,k)=>s.classList.toggle('on', k===i));
+  document.getElementById('count').textContent = (i+1) + ' / ' + slides.length;
+  notesEl.textContent = NOTES[i] || 'No speaker notes for this slide.';
+  location.hash = 'slide-' + (i+1);
+  fit();
+}
+document.getElementById('prev').onclick = ()=>show(i-1);
+document.getElementById('next').onclick = ()=>show(i+1);
+document.getElementById('toggle').onclick = ()=>{ notesEl.classList.toggle('on'); fit(); };
+addEventListener('keydown', e=>{
+  if(['ArrowRight','PageDown',' '].includes(e.key)){ e.preventDefault(); show(i+1); }
+  if(['ArrowLeft','PageUp'].includes(e.key)){ e.preventDefault(); show(i-1); }
+  if(e.key==='Home') show(0);
+  if(e.key==='End') show(slides.length-1);
+  if(e.key.toLowerCase()==='n'){ notesEl.classList.toggle('on'); fit(); }
+});
+addEventListener('resize', fit);
+const start = parseInt((location.hash.match(/slide-(\d+)/)||[])[1] || '1', 10) - 1;
+show(isNaN(start) ? 0 : start);
+</script>
+</body>
+</html>
